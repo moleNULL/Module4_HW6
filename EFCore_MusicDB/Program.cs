@@ -1,10 +1,10 @@
 ﻿namespace EFCore_MusicDB
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public void Main(string[] args)
         {
-            Console.WriteLine("");
+            Console.WriteLine(" ");
         }
     }
 }
