@@ -18,11 +18,6 @@ namespace EFCore_MusicDB.Data.Configurations
             builder.Property(a => a.Phone).HasMaxLength(30);
             builder.Property(a => a.Email).HasMaxLength(100);
             builder.Property(a => a.InstragramUrl).HasMaxLength(300);
-
-            // Relations
-            builder.HasMany(a => a.Songs)
-                .WithMany(s => s.Artists)
-                .UsingEntity(j => j.ToTable("ArtistSong"));
         }
     }
 }

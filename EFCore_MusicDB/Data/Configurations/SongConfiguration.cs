@@ -19,7 +19,8 @@ namespace EFCore_MusicDB.Data.Configurations
             // Relation
             builder.HasOne(s => s.Genre)
                 .WithMany(g => g.Songs)
-                .HasForeignKey(s => s.GenreId);
+                .HasForeignKey(s => s.GenreId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

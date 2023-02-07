@@ -20,6 +20,9 @@ namespace EFCore_MusicDB.Data
             modelBuilder.ApplyConfiguration(new ArtistConfiguration());
             modelBuilder.ApplyConfiguration(new GenreConfiguration());
             modelBuilder.ApplyConfiguration(new SongConfiguration());
+            modelBuilder.ApplyConfiguration(new ArtistSongConfiguration());
+
+            modelBuilder.Seed();
         }
     }
 }

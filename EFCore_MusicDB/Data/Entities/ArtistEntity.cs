@@ -9,6 +9,6 @@
         public string? Email { get; set; }
         public string? InstragramUrl { get; set; }
 
-        public List<SongEntity> Songs { get; set; } = new List<SongEntity>();
+        public List<ArtistSongEntity> ArtistSongs { get; set; } = new List<ArtistSongEntity>();
     }
 }

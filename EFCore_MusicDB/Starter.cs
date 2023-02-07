@@ -13,8 +13,7 @@ namespace EFCore_MusicDB
 
             using (var dbContext = new ApplicationDbContext(options))
             {
-                dbContext.Database.EnsureDeleted();
-                dbContext.Database.EnsureCreated();
+                // ...
             }
         }
 
