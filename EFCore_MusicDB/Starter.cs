@@ -11,10 +11,10 @@ namespace EFCore_MusicDB
         {
             var options = CreateDbOptions();
 
-            using (var dbContext = new ApplicationDbContext(options))
-            {
-                // ...
-            }
+            var repository = new Repository(options);
+            repository.PrintSongInfo();
+            repository.PrintSongNumberPerGenre();
+            repository.PrintTheSongsBeforeYoungestArtistBirth();
         }
 
         private static DbContextOptions<ApplicationDbContext> CreateDbOptions()

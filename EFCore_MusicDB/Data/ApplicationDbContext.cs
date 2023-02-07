@@ -14,6 +14,7 @@ namespace EFCore_MusicDB.Data
         public DbSet<ArtistEntity> Artists { get; set; } = null!;
         public DbSet<GenreEntity> Genres { get; set; } = null!;
         public DbSet<SongEntity> Songs { get; set; } = null!;
+        public DbSet<ArtistSongEntity> ArtistSongs { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
