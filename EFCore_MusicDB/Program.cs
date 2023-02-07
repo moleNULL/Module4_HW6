@@ -1,10 +1,45 @@
-﻿namespace EFCore_MusicDB
+﻿/*
+                                                      Задача
+
+             Необходимо, используя подход Code First, создать базу данных в которой должны быть следующие
+                 таблицы - Song, Genre, Artist. База данных должна быть создана при помощи миграций
+
+Таблица Artist: Поля Id, Name, DateOfBirth, Phone, Email, InstagramUrl. Поля Name и DateOfBirth обязательные.
+Таблица Song: Поля Id, Title, Duration, ReleasedDate. Все поля обязательные.
+Таблица Genre: Поля Id, Title. Все поля обязательные.
+
+Создать следующие связи:
+    ● У песни может быть только один жанр, один и тот же жанр может быть у нескольких песен.
+    ● У исполнителя может быть несколько песен, одна и та же песня может быть спета несколькими исполнителями
+
+Создать Initial Create миграцию в которой создать все сущности и связи между ними.
+    А также вставить данные во все таблицы, минимум 5 строк в каждую.
+
+Написать запросы:
+    ● Вывести название песни, имя исполнителя, название жанра песни. Вывести только песни у которых
+        есть жанр и которые поет существующий исполнитель.
+    ● Вывести кол-во песен в каждом жанре
+    ● Вывести песни, которые были написаны (ReleasedDate) до рождения самого молодого исполнителя.
+
+ */
+
+namespace EFCore_MusicDB
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("");
+            try
+            {
+                Starter.Run();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception! {ex.Message}");
+            }
+
+            Console.Write("\nPress any key to continue . . .");
+            Console.ReadLine();
         }
     }
 }
